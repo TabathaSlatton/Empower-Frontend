@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './App.css';
 import Welcome from './components/Welcome';
-// import Login from './components/Login';
+import Login from './components/Login';
 // import Signup from './components/Signup';
 
 class App extends Component {
@@ -16,13 +16,22 @@ class App extends Component {
     }
   }
 
+  renderMainContainer = () => {
+    return(
+      // we cannot use if statements in jsx
+      this.state.user.id ? 
+      <Welcome/> : 
+      <Login/>
+    )
+  }  
+
   render() {
     return (
     <>
       <h1>
         Empower
       </h1>
-      <main><Welcome/></main>
+      <main>{this.renderMainContainer()}</main>
     </>
     );
   }
