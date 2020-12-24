@@ -13,7 +13,8 @@ class App extends Component {
       first_name: "",
       last_name: "",
       profile_img_url: "",
-      point_wallet: null
+      point_wallet: null,
+      token: ""
     }
   }
 
@@ -22,9 +23,16 @@ class App extends Component {
       // we cannot use if statements in jsx
       this.state.user.id ? 
       <Welcome/> : 
-      <Login/>
+      <Login setUser={this.setUser}/>
     )
   }  
+
+    setUser = (user) => { 
+      console.log("user:", user)
+      this.setState({user: user.user})  
+      console.log("state:", this.state)
+    }
+
 
   render() {
     return (

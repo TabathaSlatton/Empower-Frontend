@@ -25,7 +25,7 @@ export default class Login extends Component {
         .then(resp => resp.json())
         .then(resp => {
             if (!resp.errors) {
-                console.log(resp)
+                this.props.setUser(resp)
             } else {
                 alert(resp.errors)
             }
