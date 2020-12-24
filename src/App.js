@@ -5,6 +5,7 @@ import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
 
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -38,10 +39,10 @@ class App extends Component {
 
   render() {
     return (
-    <>
+    <div className="App">
       <NavigationBar/>
       <main>{this.renderMainContainer()}</main>
-    </>
+    </div>
     );
   }
 
