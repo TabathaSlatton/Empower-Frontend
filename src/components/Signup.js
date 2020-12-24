@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import {Button, Form, Row, Col} from 'react-bootstrap'
 
 export default class Signup extends Component {
    
@@ -44,46 +45,51 @@ export default class Signup extends Component {
 
     render(){
         return(
-            <>
-                <h1>This is my Signup Component</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        First Name:
-                        <input type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName} />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
-                        Last Name:
-                        <input type="text" name="lastName" onChange={this.handleChange} value={this.state.lastName} />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
-                        Email:
-                        <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
-                        Password:
-                        <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
-                        Password Confirmation:
-                        <input type="password" name="passwordConfirmation" onChange={this.handleChange} value={this.state.passwordConfirmation}/>
-                    </label>
-                    <br/>
-                    <br/>
-                    <input type="submit" value="Signup" />
-                </form>
+            <div className="home-section">
                 <br/>
+                <div className="circle-overlay-signup">
+                    <h1 id="form-title">Empowerment</h1>  
+                    <Form onSubmit={this.handleSubmit}>
+                        <Row>
+                            <Col>
+                                <Form.Group controlId="formFirstName" className="mx-sm-3 mb-2">
+                                    <Form.Label>First Name</Form.Label>
+                                    <Form.Control type="rName" name="firstName" onChange={this.handleChange} value={this.state.firstName} placeholder="First Name"></Form.Control>
+                                </Form.Group>
+                            </Col>
+                            <Col>
+                                <Form.Group controlId="formLastName" className="mx-sm-3 mb-2">
+                                    <Form.Label>Last Name</Form.Label>
+                                    <Form.Control type="lastName" name="lastName" onChange={this.handleChange} value={this.state.lastName} placeholder="Last Name"></Form.Control>
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Row>
+                        <Col>
+                            <Form.Group controlId="formEmail" className="mx-sm-4 mb-1">
+                                <Form.Label>Email Address</Form.Label>
+                                <Form.Control type="email" name="email" onChange={this.handleChange} value={this.state.email} placeholder="example@email.com"></Form.Control>
+                                <Form.Text >We'll never share your email address</Form.Text>
+                            </Form.Group>
+                        </Col>
+                        </Row>
+                         <Form.Group controlId="formPassword" className="mx-sm-5 mb-2">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="password"></Form.Control>
+                                </Form.Group>
+                                <Form.Group controlId="formPasswordConfirmation" className="mx-sm-5 mb-2">
+                                    <Form.Label>Password Confirmation</Form.Label>
+                                    <Form.Control type="password" name="passwordConfirmation" onChange={this.handleChange} value={this.state.passwordConfirmation} placeholder="Confirm your password"></Form.Control>
+                                </Form.Group>
+                        
+                    
+                    <Button variant="secondary" type="submit" id="form-button">Signup</Button> 
+                </Form>
                 <br/>
                 Already have an account? 
-                <button onClick={this.props.toggleSignup}>Login</button>
-            </>
+                <Button onClick={this.props.toggleSignup} id="form-toggle">Login</Button>
+            </div>
+            </div>
         )
     }
 }

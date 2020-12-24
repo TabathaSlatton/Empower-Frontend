@@ -60,6 +60,19 @@
   font-family: "Advent Pro", sans-serif;
   font-size: 20px;
 }
+.circle-overlay-signup {
+  margin-left: 27%;
+  padding-top: 80px;
+  padding-left: 28px;
+  padding-right: 28px;
+  width: 700px;
+  background: rgba(219, 219, 219, 0.788);
+  height: 700px;
+  border-radius: 900px;
+  border: 6px solid #fe7896;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 20px;
+}
 
 #form-title {
   font-family: "Allan", cursive;
