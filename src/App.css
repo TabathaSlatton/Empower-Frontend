@@ -14,7 +14,7 @@
 
 #navbar {
   background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(78, 78, 78));
-  border-bottom: 3px solid #fe7896;
+  border-bottom: 2px solid #fe7896;
   margin: 0;
   padding: 0;
 }
@@ -38,4 +38,44 @@
 
 #nav-text:hover {
   background-color: #fe7896;
+}
+
+/* ----- login form ----- */
+.home-section {
+  background: url(./images/empowerment-cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+
+.circle-overlay {
+  margin-left: 30%;
+  padding-top: 100px;
+  width: 600px;
+  background: rgba(219, 219, 219, 0.788);
+  height: 600px;
+  border-radius: 300px;
+  border: 6px solid #fe7896;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 20px;
+}
+
+#form-title {
+  font-family: "Allan", cursive;
+  font-size: 50px;
+}
+
+#form-button {
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(78, 78, 78));
+  font-weight: bold;
+  border: none;
+  width: 30%;
+}
+
+#form-toggle {
+  background-image: linear-gradient(to left, #fe7896, #f74f73);
+  font-weight: bold;
+  border: none;
+  width: 30%;
 }
