@@ -5,9 +5,10 @@ export default class Signup extends Component {
     // state makes this a controlled component
     state = {
         email: "", 
+        username: "User", 
         firstName: "",
         lastName: "",
-        profileImgUrl: "",
+        profileImgUrl: "https://www.palettesoftware.com/wp-content/uploads/sites/8/2019/01/Time-to-empower-your-organisation.jpg",
         pointWallet: 0,
         password: "",
         passwordConfirmation: ""
@@ -17,9 +18,9 @@ export default class Signup extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        const { email, first_name, last_name, profile_img_url, point_wallet, password, passwordConfirmation} = this.state
+        const { email, username, first_name, last_name, profile_img_url, point_wallet, password, passwordConfirmation} = this.state
         if (password === passwordConfirmation){ 
-            const body = {user: {email, first_name, last_name, profile_img_url, point_wallet, password }}
+            const body = {user: {email, username, first_name, last_name, profile_img_url, point_wallet, password }}
             fetch('http://localhost:3000/api/v1/users', {
                 method: 'POST',
                 headers: {
@@ -47,18 +48,6 @@ export default class Signup extends Component {
                 <h1>This is my Signup Component</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Email:
-                        <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
-                        Username:
-                        <input type="text" name="username" onChange={this.handleChange} value={this.state.username} />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
                         First Name:
                         <input type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName} />
                     </label>
@@ -71,8 +60,8 @@ export default class Signup extends Component {
                     <br/>
                     <br/>
                     <label>
-                        Profile Imagine URL:
-                        <input type="text" name="profileImgUrl" onChange={this.handleChange} value={this.state.profileImgUrl} />
+                        Email:
+                        <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
                     </label>
                     <br/>
                     <br/>

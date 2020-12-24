@@ -1,8 +1,12 @@
 import React, {Component} from 'react'
 import './App.css';
+import NavigationBar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
   
@@ -35,9 +39,7 @@ class App extends Component {
   render() {
     return (
     <>
-      <h1>
-        Empower
-      </h1>
+      <NavigationBar/>
       <main>{this.renderMainContainer()}</main>
     </>
     );

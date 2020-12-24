@@ -1,5 +1,9 @@
 import React, { Component} from 'react';
 
+import {Button, Card, Form} from 'react-bootstrap'
+
+
+
 export default class Login extends Component {
    
     // state makes this a controlled component
@@ -32,35 +36,26 @@ export default class Login extends Component {
         })
     }
 
-    // fetch('http://localhost:3000/api/v1/profile', {
-    //     method: 'GET',
-    //     headers: {
-    //     Authorization: `Bearer <token>`
-    //      }
-    // })
-
     render(){
         return(
             <>
-                <h1>This is my Login Component</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Email:
-                        <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>
-                        Password:
-                        <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
-                    </label>
-                    <br/>
-                    <br/>
-                    <input type="submit" value="Login" />
-                </form>
+                <h1>Empowerment</h1>
+                <Form onSubmit={this.handleSubmit}>
+                    <Form.Group controlId="formEmail">
+                        <Form.Label>Email Address</Form.Label>
+                        <Form.Control type="email" name="email" onChange={this.handleChange} value={this.state.email} placeholder="example@email.com"></Form.Control>
+                        <Form.Text className="text-muted">We'll never share your email address</Form.Text>
+                    </Form.Group>
+
+                    <Form.Group controlId="formPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="password"></Form.Control>
+                    </Form.Group>
+                    <Button variant="secondary" type="submit">Login</Button> 
+                </Form>
                 <br/>
                 No Account? 
-                <button onClick={this.props.toggleSignup}>Sign Up</button>
+                <Button onClick={this.props.toggleSignup}>Sign Up</Button>
             </>
         )
     }
