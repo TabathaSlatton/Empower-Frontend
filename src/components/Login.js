@@ -48,12 +48,19 @@ export default class Login extends Component {
                         Email:
                         <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
                     </label>
+                    <br/>
+                    <br/>
                     <label>
                         Password:
                         <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
                     </label>
+                    <br/>
+                    <br/>
                     <input type="submit" value="Login" />
                 </form>
+                <br/>
+                No Account? 
+                <button onClick={this.props.toggleSignup}>Sign Up</button>
             </>
         )
     }
