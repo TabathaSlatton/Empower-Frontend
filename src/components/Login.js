@@ -14,8 +14,8 @@ export default class Login extends Component {
         e.preventDefault()
         const { email, password} = this.state
         // backend is expecting email and password params
-        const body = {email: email, password: password}
-        fetch('http://localhost:3000/api/v1/logiv', {
+        const body = {user: {email: email, password: password}}
+        fetch('http://localhost:3000/api/v1/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,13 @@ export default class Login extends Component {
             body: JSON.stringify(body),
         })
         .then(resp => resp.json())
-        .then()
+        .then(resp => {
+            if (!resp.errors) {
+                console.log(resp)
+            } else {
+                alert(resp.errors)
+            }
+        })
     }
 
     // fetch('http://localhost:3000/api/v1/profile', {
