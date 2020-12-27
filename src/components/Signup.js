@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import {Button, Form, Row, Col} from 'react-bootstrap'
+import { signupRequest } from '../services/requests';
 
 export default class Signup extends Component {
    
@@ -22,18 +23,11 @@ export default class Signup extends Component {
         const { email, username, first_name, last_name, profile_img_url, point_wallet, password, passwordConfirmation} = this.state
         if (password === passwordConfirmation){ 
             const body = {user: {email, username, first_name, last_name, profile_img_url, point_wallet, password }}
-            fetch('http://localhost:3000/api/v1/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(body),
-            })
-            .then(resp => resp.json())
+            signupRequest(body)
             .then(resp => {
                 if (!resp.errors) {
                     this.props.setUser(resp)
-                    console.log(resp)
+                    // console.log(resp)
                 } else {
                     alert(resp.errors)
                 }

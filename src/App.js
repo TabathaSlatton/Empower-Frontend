@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import './App.css';
 import NavigationBar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import {autoLoginRequest} from './services/requests'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,13 +18,43 @@ class App extends Component {
       first_name: "",
       last_name: "",
       profile_img_url: "",
-      point_wallet: null,
-      token: ""
+      point_wallet: null
     },
     signup: false
   }
 
-  setUser = (user) => this.setState({user: user.user})  
+  componentDidMount(){
+    if (localStorage.token){
+      autoLoginRequest()
+      .then(response => {
+        console.log(response)
+        if (!response.errors){
+          this.setUser(response)
+        } else {
+          alert(response.errors)
+        }
+      })
+    }
+  }
+
+  setUser = (response) => {
+    this.setState({user: response.user}) 
+    localStorage.token = response.token
+    console.log("app set user: ", this.state) 
+  }
+
+  logout = () => {
+    this.setState({user: {
+      id: null, 
+      email: "", 
+      first_name: "",
+      last_name: "",
+      profile_img_url: "",
+      point_wallet: null,
+      token: ""
+    }})
+    localStorage.clear("token")
+  }
 
   toggleSignup = () => this.setState({signup: !this.state.signup})
 
@@ -40,7 +70,9 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-      <NavigationBar/>
+    {/* navbar is where I will put a logout button */}
+    {/* <button onClick={this.props.logout}>Logout</button> */}
+      <NavigationBar logout={this.logout}/>
       <main>{this.renderMainContainer()}</main>
     </div>
     );
