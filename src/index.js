@@ -3,18 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+// allows us to make async actions in redux 
 import thunk from 'redux-thunk'
+import { rootReducer } from './reducers/rootReducer';
+import { BrowserRouter as Router} from 'react-router-dom'
 
 
+const store= createStore(rootReducer, 
+  composeWithDevTools(applyMiddleware(thunk)) 
+  )
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Provider store={store}>
+        <App />
+    </Provider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
-);
+); 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,9 +1,11 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import NavigationBar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import {autoLoginRequest} from './services/requests'
+import { connect } from 'react-redux';
+import { autoLoginRequest } from './services/requests';
+import { setProducts } from './actions/actionCreators';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,6 +26,7 @@ class App extends Component {
   }
 
   componentDidMount(){
+    this.props.setProducts()
     if (localStorage.token){
       autoLoginRequest()
       .then(response => {
@@ -79,4 +82,6 @@ class App extends Component {
   }
 
 }
-export default App;
+
+
+export default connect(null, { setProducts })(App);
