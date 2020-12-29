@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import NavigationBar from './components/Navbar';
-import Welcome from './components/Welcome';
+import HomePage from './containers/HomePage';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import ProductCards from './containers/ProductCards'
+
 import { connect } from 'react-redux';
 import { autoLoginRequest } from './services/requests';
 import { setProducts } from './actions/actionCreators';
+import { Switch, Route } from 'react-router-dom'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -65,18 +68,25 @@ class App extends Component {
     return(
       // we cannot use if statements in jsx
       this.state.user.id ? 
-      <Welcome/> : 
-      this.state.signup ? <Signup setUser={this.setUser} toggleSignup={this.toggleSignup}/> :<Login setUser={this.setUser} toggleSignup={this.toggleSignup}/>
+      //  navbar is where I will put a logout button 
+      //  <button onClick={this.props.logout}>Logout</button> 
+      <NavigationBar logout={this.logout}/>: 
+      this.state.signup ? 
+      <Signup setUser={this.setUser} toggleSignup={this.toggleSignup}/> :
+      <Login setUser={this.setUser} toggleSignup={this.toggleSignup}/>
     )
   }  
 
   render() {
     return (
-    <div className="App">
-    {/* navbar is where I will put a logout button */}
-    {/* <button onClick={this.props.logout}>Logout</button> */}
-      <NavigationBar logout={this.logout}/>
-      <main>{this.renderMainContainer()}</main>
+    <div className="App">  
+    <main>{this.renderMainContainer()}</main>
+      <Switch>
+        {/* in most specific to less specific */}
+        <Route path="/products" component={ ProductCards }/>
+        <Route path="/goals" component={ ProductCards }/>
+        <Route path="/" component={ HomePage }/>
+      </Switch>
     </div>
     );
   }

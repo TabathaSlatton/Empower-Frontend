@@ -1,12 +1,17 @@
 import React from 'react';
 
 const ProductCard = (props) => {
-    const {imgUrl, name} = props
+    console.log(props)
+    const {id, point_cost, img_url, name} = props
+    console.log(point_cost)
     return(
-        <div className="card">
-            <img src={imgUrl} alt={name} /><br/>
-            <p>{name}</p>
-        </div>
+        <>
+        <div className="card" style={{width: "50%"}}>
+            <h1>{name}</h1>
+            <img src={img_url} alt={name} /><br/>
+            <h6>{point_cost}</h6>
+        </div><br/>
+        </>
     )
 }
 
