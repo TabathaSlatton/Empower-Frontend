@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import NavigationBar from './components/Navbar';
+
 import HomePage from './containers/HomePage';
+import ProductPage from './containers/ProductPage'
+import ProfilePage from './containers/ProfilePage'
+import GoalPage from './containers/GoalPage'
+
+
 import Login from './components/Login';
 import Signup from './components/Signup';
-import ProductCards from './containers/ProductCards'
 
 import { connect } from 'react-redux';
 import { autoLoginRequest } from './services/requests';
@@ -83,8 +88,9 @@ class App extends Component {
     <main>{this.renderMainContainer()}</main>
       <Switch>
         {/* in most specific to less specific */}
-        <Route path="/products" component={ ProductCards }/>
-        <Route path="/goals" component={ ProductCards }/>
+        <Route path="/products" component={ ProductPage }/>
+        <Route path="/goals" component={ GoalPage }/>
+        <Route path="/profile" component={ ProfilePage }/>
         <Route path="/" component={ HomePage }/>
       </Switch>
     </div>

@@ -5,13 +5,13 @@ function NavigationBar(){
     return (
     <Navbar sticky="top" id="navbar">
     {/* style={{ backgroundColor: "red"}} */}
-        <Navbar.Brand href="#" id="nav-brand">Empowerment</Navbar.Brand>
+        <Navbar.Brand href="http://localhost:3001/" id="nav-brand">Empowerment</Navbar.Brand>
         <Nav className="justify-content-end" >
             <Nav.Link href="http://localhost:3001/" id="nav-text" >Home</Nav.Link>
-            <Nav.Link href="#" id="nav-text" >Goals</Nav.Link>
+            <Nav.Link href="http://localhost:3001/goals" id="nav-text" >Goals</Nav.Link>
             <Nav.Link href="http://localhost:3001/products" id="nav-text" >Reward Store</Nav.Link>
-            <Nav.Link href="#" id="nav-text" >Groups</Nav.Link>
-            <Nav.Link href="#" id="nav-text" >Chat</Nav.Link>
+            {/* <Nav.Link href="#" id="nav-text" >Groups</Nav.Link> */}
+            <Nav.Link href="http://localhost:3001/profile" id="nav-text" >Profile</Nav.Link>
         </Nav>
     </Navbar>
     )

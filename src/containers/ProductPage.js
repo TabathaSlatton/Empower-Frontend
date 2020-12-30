@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import ProductCard from '../components/ProductCard'
 
-const ProductCards = (props) => {
+const ProductPage = (props) => {
     // console.log(props.products)
     return(
         <div className="cards">
@@ -15,4 +15,4 @@ const msp = (state) => ({
     products: state.products.products
 })
 
-export default connect(msp)(ProductCards);
+export default connect(msp)(ProductPage);
