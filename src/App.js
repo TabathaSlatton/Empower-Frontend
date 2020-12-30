@@ -75,10 +75,10 @@ class App extends Component {
       this.state.user.id ? 
       //  navbar is where I will put a logout button 
       //  <button onClick={this.props.logout}>Logout</button> 
-      <NavigationBar logout={this.logout}/>: 
+      <NavigationBar logout = {this.logout}/>: 
       this.state.signup ? 
-      <Signup setUser={this.setUser} toggleSignup={this.toggleSignup}/> :
-      <Login setUser={this.setUser} toggleSignup={this.toggleSignup}/>
+      <Signup setUser = {this.setUser} toggleSignup = {this.toggleSignup}/> :
+      <Login setUser = {this.setUser} toggleSignup = {this.toggleSignup}/>
     )
   }  
 
@@ -88,10 +88,10 @@ class App extends Component {
     <main>{this.renderMainContainer()}</main>
       <Switch>
         {/* in most specific to less specific */}
-        <Route path="/products" component={ ProductPage }/>
-        <Route path="/goals" component={ GoalPage }/>
-        <Route path="/profile" component={ ProfilePage }/>
-        <Route path="/" component={ HomePage }/>
+        <Route path="/products" component = { ProductPage }/>
+        <Route path="/goals" component = { GoalPage }/>
+        <Route path="/profile" component = { ProfilePage }/>
+        <Route path="/" component = { HomePage }/>
       </Switch>
     </div>
     );

@@ -1,8 +1,12 @@
-export const goalsReducer = (state = [], action) => {
+const initialGoalsState = {
+    goals: []
+}
+
+export const goalsReducer = (state = initialGoalsState, action) => {
     switch(action.type){
         case 'FETCH_GOALS':
-            return action.payload
+            return {...state, goals: action.payload };
         default:
             return state
     }
-}
+} 
