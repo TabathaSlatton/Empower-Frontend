@@ -1,8 +1,4 @@
-const initialUsersState = {
-    users: []
-}
-
-export const usersReducer = (state = initialUsersState, action) => {
+export const usersReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_USERS':
             return action.payload

@@ -1,11 +1,7 @@
-const initialCartItemsState = {
-    cartItems: []
-}
-
-export const cartItemsReducer = (state = initialCartItemsState, action) => {
+export const cartItemsReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_CART_ITEMS':
-            return {...state, cartItems: action.payload };
+            return action.payload;
         default:
             return state
     } 

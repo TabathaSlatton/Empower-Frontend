@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
-import { composeWithDevTools } from 'redux-devtools-extension'
+
+// allows us to replace window.__Redux_devtools
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+
 // allows us to make async actions in redux 
 import thunk from 'redux-thunk'
+
 import { rootReducer } from './reducers/rootReducer';
 import { BrowserRouter as Router} from 'react-router-dom'
 
-
-const store= createStore(rootReducer, 
+// store accepts 1. reducer 2. dev tools/middleware
+const store= createStore(
+  rootReducer, 
   composeWithDevTools(applyMiddleware(thunk)) 
   )
 

@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
-import NavigationBar from './components/Navbar';
+import NavigationBar from '../components/Navbar';
 
-import HomePage from './containers/HomePage';
-import ProductPage from './containers/ProductPage'
-import ProfilePage from './containers/ProfilePage'
-import GoalPage from './containers/GoalPage'
+import HomePage from '../components/HomePage';
+import ProductPage from './ProductPage'
+import ProfilePage from './ProfilePage'
+import GoalPage from './GoalPage'
 
 
-import Login from './components/Login';
-import Signup from './components/Signup';
+import Login from '../components/Login';
+import Signup from '../components/Signup';
 
 import { connect } from 'react-redux';
-import { autoLoginRequest } from './services/requests';
-import { setProducts } from './actions/actionCreators';
+import { autoLoginRequest } from '../services/requests';
+import { setProducts } from '../actions/actionCreators';
 import { Switch, Route } from 'react-router-dom'
 
-import './App.css';
+import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -34,11 +34,11 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.props.setProducts()
+    // this.props.setProducts()
     if (localStorage.token){
       autoLoginRequest()
       .then(response => {
-        console.log(response)
+        // console.log(response)
         if (!response.errors){
           this.setUser(response)
         } else {
@@ -51,7 +51,7 @@ class App extends Component {
   setUser = (response) => {
     this.setState({user: response.user}) 
     localStorage.token = response.token
-    console.log("app set user: ", this.state) 
+    // console.log("app set user: ", this.state) 
   }
 
   logout = () => {

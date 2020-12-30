@@ -1,13 +1,21 @@
-import React, { Component} from 'react';
+import React, { Component} from 'react'
+import { connect } from 'react-redux'
 
+import { fetchGoals } from '../actions/goalsActions'
+class GoalPage extends Component {
 
-export default class GoalPage extends Component {
-
-    render(){
+    componentDidMount() {
+        this.props.fetchGoals()
+    }
+    
+    render() {
         return(
             <div>
-                <h1>Goals</h1>
+            <h1>Goals</h1>
+            {/* {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)} */}
             </div>
         )
     }
 }
+
+export default connect(null, { fetchGoals } )(GoalPage);

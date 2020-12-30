@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux'
+
 import { cartItemsReducer } from './cartItemsReducer'
 import { goalsReducer } from './goalsReducer'
 import { usersReducer } from './usersReducer'
@@ -11,5 +12,4 @@ export const rootReducer = combineReducers({
     goals: goalsReducer,
     products: productsReducer,
     wishItems: wishItemsReducer
-
 })

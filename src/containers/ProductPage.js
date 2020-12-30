@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { Component} from 'react'
 import { connect } from 'react-redux'
-import ProductCard from '../components/ProductCard'
 
-const ProductPage = (props) => {
-    // console.log(props.products)
-    return(
-        <div className="cards">
-        {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)}
-        </div>
-    )
+import { fetchProducts } from '../actions/productsActions'
+// import ProductCard from '../components/ProductCard'
+
+class ProductPage extends Component {
+
+    componentDidMount() {
+        this.props.fetchProducts()
+    }
+    
+    render() {
+        return(
+            <div className="cards">
+            <h1>Products</h1>
+            {/* {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)} */}
+            </div>
+        )
+    }
 }
 
-const msp = (state) => ({
-    products: state.products.products
-})
-
-export default connect(msp)(ProductPage);
+export default connect(null, { fetchProducts } )(ProductPage);
