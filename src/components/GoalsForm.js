@@ -10,7 +10,7 @@ class GoalsForm extends Component {
         name: '',
         completed: false,
         category: '',
-        point_value: null,
+        point_value: 0,
         // need to access user state to assign
         user_id: 1
     }

@@ -1,13 +1,23 @@
 import React from 'react';
-import { connect, connet } from 'react-redux';
+import { connect } from 'react-redux';
+import GoalItems from './GoalItems'
 
 const GoalsList = ({ goals }) => {
         
     return (
-        <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Point Value</th>
+                {/* <th>Complete</th> */}
+            </tr>
+            </thead>
+            <tbody>
             {/* {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)} */}
-            {goals.map(goal => <ul><li key={goal.id}>{goal.name}</li></ul>)}
-        </div>
+            {goals.map(goal => <GoalItems key = {goal.id} {...goal}/> )}
+            </tbody>
+        </table>
      );
 };
 
