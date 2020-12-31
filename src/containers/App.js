@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import NavigationBar from '../components/Navbar';
 
-import HomePage from '../components/HomePage';
+import HomePage from '../containers/HomePage';
 import ProductPage from './ProductPage'
 import ProfilePage from './ProfilePage'
 import GoalPage from './GoalPage'
 
 
-import Login from '../components/Login';
+import Login from '../components/LoginForm';
 import Signup from '../components/Signup';
 
 import { connect } from 'react-redux';
