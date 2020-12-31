@@ -51,7 +51,7 @@ class App extends Component {
   setUser = (response) => {
     this.setState({user: response.user}) 
     localStorage.token = response.token
-    // console.log("app set user: ", this.state) 
+     console.log("app set user: ", this.state) 
   }
 
   logout = () => {
@@ -91,7 +91,7 @@ class App extends Component {
         <Route path="/products" component = { ProductPage }/>
         <Route path="/goals" component = { GoalPage }/>
         <Route path="/profile" component = { ProfilePage }/>
-        <Route path="/" component = { HomePage }/>
+        <Route exact path="/" component = { HomePage }/>
       </Switch>
     </div>
     );

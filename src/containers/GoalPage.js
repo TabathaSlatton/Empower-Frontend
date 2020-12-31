@@ -2,6 +2,8 @@ import React, { Component} from 'react'
 import { connect } from 'react-redux'
 
 import { fetchGoals } from '../actions/goalsActions'
+import GoalsForm from '../components/GoalsForm'
+import GoalsList from '../components/GoalsList'
 class GoalPage extends Component {
 
     componentDidMount() {
@@ -12,7 +14,8 @@ class GoalPage extends Component {
         return(
             <div>
             <h1>Goals</h1>
-            {/* {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)} */}
+            <GoalsForm/>
+            <GoalsList/>
             </div>
         )
     }
