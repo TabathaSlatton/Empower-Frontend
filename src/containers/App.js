@@ -1,20 +1,13 @@
 import React, { Component } from 'react'
 import NavigationBar from '../components/Navbar';
 
-import HomePage from '../containers/HomePage';
-import ProductPage from './ProductPage'
-import ProfilePage from './ProfilePage'
-import GoalPage from './GoalPage'
-
-
 import Login from '../components/LoginForm';
 import Signup from '../components/Signup';
 
 import { connect } from 'react-redux';
 import { autoLoginRequest } from '../services/requests';
 import { setProducts } from '../actions/actionCreators';
-import { Switch, Route } from 'react-router-dom'
-
+import Router from "../components/Router"
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -86,13 +79,7 @@ class App extends Component {
     return (
     <div className="App">  
     <main>{this.renderMainContainer()}</main>
-      <Switch>
-        {/* in most specific to less specific */}
-        <Route path="/products" component = { ProductPage }/>
-        <Route path="/goals" component = { GoalPage }/>
-        <Route path="/profile" component = { ProfilePage }/>
-        <Route exact path="/" component = { HomePage }/>
-      </Switch>
+    <Router/>
     </div>
     );
   }
