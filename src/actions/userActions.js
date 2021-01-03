@@ -68,6 +68,30 @@ export const autoLogin = () => {
     }
   }
 
+  export const sendUpdateProfile = (userData) => {
+    return dispatch => {
+        const body = {user: userData[0]}
+        const id = userData[1]
+        console.log("id", userData)
+      fetch(API + '/api/v1/users/' + id, {
+        method: 'PATCH', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      })
+      .then(response => response.json())
+      .then(response => {
+        localStorage.token = response.token
+        dispatch({
+        type: "SET_USER",
+        payload: {user: response.user}
+      })
+    })
+    }
+  }
+
+
   export const logout = () => {
     return dispatch => {
       localStorage.clear("token")

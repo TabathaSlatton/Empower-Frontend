@@ -29,7 +29,7 @@ export const usersReducer = (state=initialState, action) => {
       console.log({...state, ...action.payload.user})
       return {...state, ...action.payload.user}
     case "LOGOUT":
-      return {...state, username: null, id: null}
+      return {...state, username: null, id: null}      
     default:
       return {...state}
   }
