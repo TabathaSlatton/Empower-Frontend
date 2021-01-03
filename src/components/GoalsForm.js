@@ -12,10 +12,16 @@ class GoalsForm extends Component {
         category: '',
         point_value: 0,
         // need to access user state to assign
-        user_id: 1
+        user_id: null
     }
 
-    handleChange = (e) => this.setState({[e.target.name]: e.target.value})
+    handleChange = (e) => {
+        const user_id = this.props.user.id
+        this.setState({
+        [e.target.name]: e.target.value,
+        user_id: user_id
+         })
+    }
  
     handleSubmit = (e) => {
         e.preventDefault()
@@ -23,6 +29,7 @@ class GoalsForm extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>Name: </label>
@@ -45,4 +52,8 @@ class GoalsForm extends Component {
     }
 }
 
-export default connect(null, { addGoal })(GoalsForm);
+const mapStateToProps = (state) => (
+    {user: state.users}
+)
+
+export default connect(mapStateToProps, { addGoal })(GoalsForm);

@@ -10,7 +10,7 @@ function NavigationBar(props){
             <Nav.Link href="http://localhost:3001/goals" id="nav-text" >Goals</Nav.Link>
             <Nav.Link href="http://localhost:3001/products" id="nav-text" >Reward Store</Nav.Link>
             <Nav.Link href="http://localhost:3001/profile" id="nav-text" >Profile</Nav.Link>
-            <Button inline  onClick={props.logout} id="nav-logout">Logout</Button>
+            <Button inline="true"  onClick={props.logout} id="nav-logout">Logout</Button>
         </Nav>
     </Navbar>
     )
