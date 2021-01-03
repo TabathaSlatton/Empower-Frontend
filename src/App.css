@@ -22,7 +22,8 @@
 #nav-brand {
   color: #fbf3f5;
   font-family: "Allan", cursive;
-  margin-left: 10px;
+  margin-left: 2%;
+  margin-right: auto;
   font-size: 30px;
   padding: 0px;
 }
@@ -33,11 +34,21 @@
   text-align: center;
   font-size: 17px;
   padding: 14px 16px;
-  /* padding: 0px; */
 }
 
 #nav-text:hover {
   background-color: #fe7896;
+}
+
+#nav-logout {
+  background-image: linear-gradient(to left, #fe7896, #f74f73);
+  font-weight: bold;
+  border: none;
+  /* padding: 1%; */
+  align-self: center;
+  /* height: 50%; */
+  margin-left: 30px;
+  margin-right: 5px;
 }
 
 /* ----- login form ----- */

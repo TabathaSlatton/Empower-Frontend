@@ -1,14 +1,10 @@
 import React, { Component} from 'react'
 import { connect } from 'react-redux'
 
-import { fetchGoals } from '../actions/goalsActions'
 import GoalsForm from '../components/GoalsForm'
 import GoalsList from '../components/GoalsList'
 class GoalPage extends Component {
 
-    componentDidMount() {
-        this.props.fetchGoals()
-    }
     
     render() {
         return(
@@ -21,4 +17,4 @@ class GoalPage extends Component {
     }
 }
 
-export default connect(null, { fetchGoals } )(GoalPage);
+export default connect(null, { } )(GoalPage);
