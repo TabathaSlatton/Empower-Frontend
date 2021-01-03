@@ -8,13 +8,22 @@ class GoalPage extends Component {
     
     render() {
         return(
+            this.props.user.id 
+            ?
             <div>
             <h1>Goals</h1>
             <GoalsForm/>
             <GoalsList/>
             </div>
+            :
+            <>
+            </>
         )
     }
 }
 
-export default connect(null, { } )(GoalPage);
+const mapStateToProps = (state) => (
+    {user: state.users}
+)
+
+export default connect(mapStateToProps, { } )(GoalPage);

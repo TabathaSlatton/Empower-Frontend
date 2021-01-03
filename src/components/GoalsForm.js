@@ -38,10 +38,6 @@ class GoalsForm extends Component {
                 <input type='number' name='point_value' value={this.state.point_value} onChange={this.handleChange}/>
                 <br/>
 
-                <label>Complete: </label>
-                <input type='checkbox' name='completed' value={this.state.completed} onChange={this.handleChange}/>
-                <br/>
-
                 <input type='submit' value='Create Goal' />
 
             </form>

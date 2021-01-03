@@ -33,13 +33,13 @@ const Login = (props) => {
                 <Col>
                   <Form.Group controlId="formFirstName" className="mx-sm-3 mb-2">
                     <Form.Label>First Name</Form.Label>
-                    <Form.Control type="rName" name="firstName" onChange={handleLoginFormChange} value={firstName} placeholder="First Name"></Form.Control>
+                    <Form.Control type="test" name="firstName" onChange={handleLoginFormChange} value={firstName} placeholder="First Name"></Form.Control>
                   </Form.Group>
                 </Col>
                 <Col>
                   <Form.Group controlId="formLastName" className="mx-sm-3 mb-2">
                     <Form.Label>Last Name</Form.Label>
-                    <Form.Control type="lastName" name="lastName" onChange={handleLoginFormChange} value={lastName} placeholder="Last Name"></Form.Control>
+                    <Form.Control type="text" name="lastName" onChange={handleLoginFormChange} value={lastName} placeholder="Last Name"></Form.Control>
                   </Form.Group>
                     </Col>
                 </Row>

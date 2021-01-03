@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
-import NavigationBar from '../components/Navbar';
+import Router from "../components/Router"
 
+import NavigationBar from '../components/Navbar';
 import { fetchGoals } from '../actions/goalsActions'
 import { fetchProducts } from '../actions/productsActions'
-
 import Login from '../components/Login';
-
-import { connect } from 'react-redux';
 import { autoLogin, logout } from '../actions/userActions';
 
-import Router from "../components/Router"
+
+import { connect } from 'react-redux';
+
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
   
-
-
   componentDidMount(){ 
       localStorage.token && this.props.autoLogin()  
        this.props.fetchGoals()
@@ -26,12 +24,7 @@ class App extends Component {
 
   renderMainContainer = () => {
     return(
-      this.props.user.id 
-      ?
-         <NavigationBar logout={this.props.logout}/>
-      :
-        <Login/>
-
+      this.props.user.id ? <NavigationBar logout={this.props.logout}/> : <Login/>
     )
   }  
 

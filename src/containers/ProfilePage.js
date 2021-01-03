@@ -1,7 +1,8 @@
 import React, { Component} from 'react';
+import { connect } from 'react-redux'
 
 
-export default class ProfilePage extends Component {
+class ProfilePage extends Component {
 
     render(){
         return(
@@ -11,3 +12,5 @@ export default class ProfilePage extends Component {
         )
     }
 }
+
+export default connect(mapStateToProps, {  } )(ProfilePage);

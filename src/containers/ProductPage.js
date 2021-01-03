@@ -5,13 +5,22 @@ class ProductPage extends Component {
   
     render() {
         return(
+            this.props.user.id 
+            ?
             <div >
                 <h1>Products</h1>
                 <ProductCards/>
             </div>
+            :
+            <>
+            </>
         )
     }
 
 }
 
-export default connect(null, {  } )(ProductPage);
+const mapStateToProps = (state) => (
+    {user: state.users}
+  )
+
+export default connect(mapStateToProps, {  } )(ProductPage);
