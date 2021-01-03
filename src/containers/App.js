@@ -7,8 +7,7 @@ import { fetchProducts } from '../actions/productsActions'
 import Login from '../components/Login';
 
 import { connect } from 'react-redux';
-import { autoLogin } from '../actions/userActions';
-import { logout } from '../actions/userActions';
+import { autoLogin, logout } from '../actions/userActions';
 
 import Router from "../components/Router"
 import '../App.css';
@@ -29,10 +28,7 @@ class App extends Component {
     return(
       this.props.user.id 
       ?
-          <>
-          <NavigationBar logout={this.props.logout}/>
-          {/* <button onClick={this.props.logout}>Logout!</button> */}
-          </>
+         <NavigationBar logout={this.props.logout}/>
       :
         <Login/>
 
