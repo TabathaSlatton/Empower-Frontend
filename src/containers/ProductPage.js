@@ -1,4 +1,5 @@
 import React, { Component} from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import ProductCards from '../components/ProductCards'
 class ProductPage extends Component {
@@ -8,7 +9,11 @@ class ProductPage extends Component {
             this.props.user.id 
             ?
             <div >
-                <h1>Products</h1>
+                <section id="home-heading" class="p-5">
+                    <div class="dark-overlay">
+                        <h1 id="heading-title">Products</h1>       
+                    </div>
+                </section>
                 <ProductCards/>
             </div>
             :

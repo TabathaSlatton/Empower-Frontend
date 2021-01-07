@@ -2,12 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import ProductCard from '../components/ProductCard'
 
+import {CardColumns, CardGroup} from 'react-bootstrap'
+
+
 const ProductCards = (props) => {
     console.log(props)
     return(
-        <div className="cards">
+        <CardColumns width="100%">
+        {/* sort/filter will go here */}
         {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)}
-        </div>
+        </CardColumns>
     )
 }
 

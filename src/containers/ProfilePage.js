@@ -10,9 +10,14 @@ class ProfilePage extends Component {
             <div>
                 <h1>Edit Profile</h1>
                 <ProfileForm/>
-                <h3>-----------------------------------------------------------------------------</h3>
-                <h1>Profile</h1>
+                <h1>{this.props.user.first_name} {this.props.user.last_name}'s Profile</h1>
                 <img src={this.props.user.profile_img_url}/>
+                { this.props.user.point_wallet ?
+                    <h3>You have {this.props.user.point_wallet} points available.</h3>
+                :
+                    <h3>You have no points availabe.</h3>
+                }
+                {/* wish list here */}
             </div>
         )
     }

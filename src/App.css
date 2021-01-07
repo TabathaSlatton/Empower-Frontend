@@ -9,6 +9,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Allan:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap");
 
 /* ----- navbar ----- */
 
@@ -102,4 +103,54 @@
   font-weight: bold;
   border: none;
   width: 30%;
+}
+
+/* ------------ Cards --------------- */
+
+#card-title {
+  font-family: "Allan", cursive;
+  font-size: 40px;
+  margin-top: -15px;
+}
+
+#save-button {
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(78, 78, 78));
+  border: none;
+  /*  */
+  color: white;
+  /* padding: 20px; */
+  text-align: center;
+  /* display: inline-block; */
+  font-size: 30px;
+  margin: -2% 2px;
+  margin-right: -95%;
+  border-radius: 300%;
+}
+
+/* Headings */
+#home-heading {
+  position: relative;
+  min-height: 200px;
+  background: url("./images/peonies.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#heading-title {
+  font-family: "Aguafina Script", cursive;
+  text-align: center;
+  font-size: 130px;
+  margin-top: 2%;
 }

@@ -6,6 +6,7 @@ const GoalItems = (props) => {
      const {id, name, completed, categoty, point_value} = props
     return(
         <>
+        {/* onClick toggleComplete */}
         <tr>
                 <th>{name}</th>
                 <th> {point_value} </th>

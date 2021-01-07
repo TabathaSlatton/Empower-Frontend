@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Card, Button} from 'react-bootstrap'
+
 
 const ProductCard = (props) => {
     console.log(props)
@@ -7,11 +9,16 @@ const ProductCard = (props) => {
     console.log(point_cost)
     return(
         <>
-        <div className="card" style={{width: "50%"}}>
-            <h1>{name}</h1>
-            <img src={img_url} alt={name} /><br/>
-            <h6>{point_cost}</h6>
-        </div><br/>
+        <Card>
+            <header> <Button id="save-button"><i class="far fa-heart"></i></Button> </header>
+            <Card.Title id="card-title">{name}</Card.Title>
+            {/* heart icon to add to wish list */}
+            <Card.Img src={img_url} alt={name} /><br/>
+            <Card.Body>{point_cost} points</Card.Body>
+            <footer> <Button id="form-toggle">Add to Cart</Button> </footer><br/>
+
+            <br/>
+        </Card>
         </>
     )
 }

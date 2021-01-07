@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {Button, Form, Row, Col} from 'react-bootstrap'
-import { toggleSignup, handleLoginFormChange, sendUpdateProfile, sendLogin } from '../actions/userActions'
+import {  handleLoginFormChange, sendUpdateProfile } from '../actions/userActions'
 
 const ProfileForm = (props) => {
   const { form, handleLoginFormChange, sendUpdateProfile, user_id  } = props
@@ -18,7 +18,6 @@ const ProfileForm = (props) => {
       }
   }
 
-  console.log("Info:", props)
   return(
       
     <> 
