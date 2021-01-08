@@ -6,7 +6,7 @@ import {Table} from 'react-bootstrap'
 
 
 const GoalsList = ({ goals }) => {
-        
+
     return (
         <Table hover striped>
             <thead>

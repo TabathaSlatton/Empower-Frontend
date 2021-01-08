@@ -154,3 +154,11 @@
   font-size: 130px;
   margin-top: 2%;
 }
+
+/* -------- Goal List -------- */
+
+.complete {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}

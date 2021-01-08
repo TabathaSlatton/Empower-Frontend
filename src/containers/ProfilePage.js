@@ -8,9 +8,17 @@ class ProfilePage extends Component {
     render(){
         return(
             <div>
-                <h1>Edit Profile</h1>
-                <ProfileForm/>
-                <h1>{this.props.user.first_name} {this.props.user.last_name}'s Profile</h1>
+                <section id="home-heading" className="p-5">
+                    <div class="dark-overlay">
+                        <h1 id="heading-title">Edit Profile</h1>       
+                    </div>
+                </section><br/><br/>
+                <ProfileForm/><br/><br/>
+                <section id="home-heading" className="p-5">
+                    <div class="dark-overlay">
+                        <h1 id="heading-title">{this.props.user.first_name} {this.props.user.last_name}'s Profile</h1>     
+                    </div>
+                </section><br/><br/>
                 <img src={this.props.user.profile_img_url}/>
                 { this.props.user.point_wallet ?
                     <h3>You have {this.props.user.point_wallet} points available.</h3>

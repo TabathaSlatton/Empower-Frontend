@@ -10,9 +10,9 @@ const ProductCard = (props) => {
     return(
         <>
         <Card>
+            {/* heart icon to add to wish list---needs functionality */}
             <header> <Button id="save-button"><i class="far fa-heart"></i></Button> </header>
             <Card.Title id="card-title">{name}</Card.Title>
-            {/* heart icon to add to wish list */}
             <Card.Img src={img_url} alt={name} /><br/>
             <Card.Body>{point_cost} points</Card.Body>
             <footer> <Button id="form-toggle">Add to Cart</Button> </footer><br/>

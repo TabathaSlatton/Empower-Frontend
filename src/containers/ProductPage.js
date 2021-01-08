@@ -9,7 +9,7 @@ class ProductPage extends Component {
             this.props.user.id 
             ?
             <div >
-                <section id="home-heading" class="p-5">
+                <section id="home-heading" className="p-5">
                     <div class="dark-overlay">
                         <h1 id="heading-title">Products</h1>       
                     </div>
