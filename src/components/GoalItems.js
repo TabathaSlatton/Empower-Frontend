@@ -1,7 +1,12 @@
+import { Button } from 'react-bootstrap';
 import React from 'react';
+import { connect } from 'react-redux';
+
+
 
 
 const GoalItems = (props) => {
+    const {id, name, completed, category, point_value} = props
 
     const handleClick = (e) => {
         // e.target.parentNode
@@ -9,21 +14,24 @@ const GoalItems = (props) => {
         e.target.parentNode.className === "complete" ? 
             e.target.parentNode.className = "" : 
             e.target.parentNode.className = "complete" 
-        console.log("oww!", e.target.className)
     }
 
-    const {id, name, completed, categoty, point_value} = props
+    const handleDelete = (e) => {
+        console.log("Delete", id)
+    }
+
     return(
         <>
-        {/* onClick toggleComplete */}
         <tr onClick={handleClick}>
                 <td >{name}</td>
                 <td> {point_value} </td>
-                {/* <th> {completed}</th> */}
+                <td><Button id='form-toggle' onClick={handleDelete}><i className="far fa-trash-alt"></i></Button></td>
          </tr>
         </>
     )
 }
+
+
 
 export default GoalItems
 
