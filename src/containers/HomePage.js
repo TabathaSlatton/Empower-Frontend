@@ -6,8 +6,6 @@ class HomePage extends Component {
   
   render() {
     return (
-      this.props.user.id 
-      ?
       <div>
          <section id="home-heading" className="p-5">
                     <div class="dark-overlay">
@@ -16,9 +14,6 @@ class HomePage extends Component {
                 </section><br/><br/>
         <h2>This is from my homepage container</h2>
       </div>
-      :
-      <>
-      </>
     );
   }
 }

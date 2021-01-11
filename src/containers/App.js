@@ -24,7 +24,13 @@ class App extends Component {
 
   renderMainContainer = () => {
     return(
-      this.props.user.id ? <NavigationBar logout={this.props.logout}/> : <Login/>
+      this.props.user.id ?
+      <>
+       <NavigationBar logout={this.props.logout}/> 
+       <Router/>
+       </>
+       : 
+       <Login/>
     )
   }  
 
@@ -32,7 +38,6 @@ class App extends Component {
     return (
     <div className="App">  
     <main>{this.renderMainContainer()}</main>
-    <Router/>
     </div>
     );
   }

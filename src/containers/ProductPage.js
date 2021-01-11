@@ -6,8 +6,6 @@ class ProductPage extends Component {
   
     render() {
         return(
-            this.props.user.id 
-            ?
             <div >
                 <section id="home-heading" className="p-5">
                     <div class="dark-overlay">
@@ -16,9 +14,6 @@ class ProductPage extends Component {
                 </section>
                 <ProductCards/>
             </div>
-            :
-            <>
-            </>
         )
     }
 

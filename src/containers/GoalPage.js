@@ -8,8 +8,6 @@ class GoalPage extends Component {
     
     render() {
         return(
-            this.props.user.id 
-            ?
             <div>
             <section id="home-heading" className="p-5">
                     <div className="dark-overlay">
@@ -19,9 +17,6 @@ class GoalPage extends Component {
             <GoalsForm/><br/><br/>
             <GoalsList/>
             </div>
-            :
-            <>
-            </>
         )
     }
 }
