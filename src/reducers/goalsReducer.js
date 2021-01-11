@@ -11,7 +11,8 @@ export const goalsReducer = (state = [], action) => {
         case 'ADD_GOAL':
             return [...state, action.payload]
         case 'DELETE_GOAL':
-            return {goals: state.goals.filter(goal => goal.id !== action.payload)}
+            let newGoals = state.filter(goal => goal.id !== action.payload)
+            return [...newGoals]
         default:
             return state
     }

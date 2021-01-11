@@ -28,21 +28,20 @@ export const addGoal = goal => {
     }
 }
 
-export const deleteGoal = goal => {
+export const deleteGoal = goalId => {
     return dispatch => {
-        fetch(API + "/goals/" + goal.id, {
+        fetch(API + "/goals/" + goalId, {
             method: 'DELETE',
-            body: JSON.stringify(goal),
             headers: {
             'Content-Type': 'application/json' 
             }
         })
-        .then(resp => resp.json())
-        .then(goal => dispatch({ 
+        .then( 
+            dispatch({ 
             type: 'DELETE_GOAL', 
-            payload: goal.id}
-        ))
-    }
+            payload: goalId
+        }))
+     }
 }
 
 // export const updateCompleteGoal = (goalData) => {

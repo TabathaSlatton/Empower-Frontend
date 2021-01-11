@@ -1,6 +1,7 @@
 import { Button } from 'react-bootstrap';
 import React from 'react';
 import { connect } from 'react-redux';
+import { deleteGoal } from '../actions/goalsActions';
 
 
 
@@ -16,8 +17,10 @@ const GoalItems = (props) => {
             e.target.parentNode.className = "complete" 
     }
 
-    const handleDelete = (e) => {
+    const handleDelete = () => {
+        // e.preventDefault()
         console.log("Delete", id)
+        props.deleteGoal(id)
     }
 
     return(
@@ -33,7 +36,8 @@ const GoalItems = (props) => {
 
 
 
-export default GoalItems
+// export default GoalItems
+export default connect(null, { deleteGoal })(GoalItems)
 
 // if complete, add strikethrough
 // need a delete button
