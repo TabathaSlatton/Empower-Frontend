@@ -58,6 +58,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   min-height: 700px;
 }
 
@@ -172,9 +174,10 @@
   position: relative;
   bottom: 0;
   width: 100%;
+  border-bottom: 2px solid #fe7896;
 }
 
 .footer-list {
-  color: gray;
+  color: darkgray;
   border: none;
 }
