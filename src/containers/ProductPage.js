@@ -8,7 +8,7 @@ class ProductPage extends Component {
         return(
             <div >
                 <section id="home-heading" className="p-5">
-                    <div class="dark-overlay">
+                    <div className="dark-overlay">
                         <h1 id="heading-title">Products</h1>       
                     </div>
                 </section>

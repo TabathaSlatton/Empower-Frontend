@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import AboutUs from '../components/Home/AboutUs';
+import HomeCarousel from '../components/Home/HomeCarousel';
+import Resources from '../components/Home/Resources';
+
 
 
 class HomePage extends Component {
@@ -7,12 +11,9 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-         <section id="home-heading" className="p-5">
-                    <div class="dark-overlay">
-                        <h1 id="heading-title">Welcome to Empower</h1>       
-                    </div>
-                </section><br/><br/>
-        <h2>This is from my homepage container</h2>
+          <HomeCarousel/><br/><br/>
+          <AboutUs/><br/>
+          <Resources/>
       </div>
     );
   }

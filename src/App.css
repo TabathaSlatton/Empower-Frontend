@@ -162,3 +162,9 @@
   color: gray;
   font-style: italic;
 }
+
+/* ------ Home Page -------- */
+
+#about-us {
+  border-bottom: 2px solid rgba(190, 189, 189, 0.158);
+}

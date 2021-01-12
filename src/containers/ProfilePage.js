@@ -9,13 +9,13 @@ class ProfilePage extends Component {
         return(
             <div>
                 <section id="home-heading" className="p-5">
-                    <div class="dark-overlay">
+                    <div className="dark-overlay">
                         <h1 id="heading-title">Edit Profile</h1>       
                     </div>
                 </section><br/><br/>
                 <ProfileForm/><br/><br/>
                 <section id="home-heading" className="p-5">
-                    <div class="dark-overlay">
+                    <div className="dark-overlay">
                         <h1 id="heading-title">{this.props.user.first_name} {this.props.user.last_name}'s Profile</h1>     
                     </div>
                 </section><br/><br/>

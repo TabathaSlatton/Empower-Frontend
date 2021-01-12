@@ -26,8 +26,7 @@ export const usersReducer = (state=initialState, action) => {
         [action.payload.name]: action.payload.value
       }}
     case "SET_USER":
-      console.log({...state, ...action.payload.user})
-      return {...state, ...action.payload.user}
+      return {...state, ...action.payload.user}      
     case "LOGOUT":
       return {...state, username: null, id: null}      
     default:

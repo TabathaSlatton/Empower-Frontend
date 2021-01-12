@@ -12,7 +12,8 @@ const ProfileForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
       if (password === originalPassword){
-        sendUpdateProfile([{email: email, password: password, username: username, profile_img_url: profileImgUrl, first_name: firstName, last_name: lastName, point_wallet: pointWallet}, user_id])
+        // sendUpdateProfile([{email: email, password: password, username: username, profile_img_url: profileImgUrl, first_name: firstName, last_name: lastName, point_wallet: pointWallet}, user_id])
+        sendUpdateProfile([{email: email, profile_img_url: profileImgUrl, first_name: firstName, last_name: lastName}, user_id])
       } else {
         alert("Invalid Password")
       }
