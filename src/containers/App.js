@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../components/Footer';
 
 
 class App extends Component {
@@ -28,9 +29,14 @@ class App extends Component {
       <>
        <NavigationBar logout={this.props.logout}/> 
        <Router/>
+       <Footer/>
        </>
        : 
+       <>
+       <NavigationBar/>
        <Login/>
+       <Footer/>
+       </>
     )
   }  
 

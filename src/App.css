@@ -165,6 +165,16 @@
 
 /* ------ Home Page -------- */
 
-#about-us {
-  border-bottom: 2px solid rgba(190, 189, 189, 0.158);
+.main-footer {
+  color: white;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(78, 78, 78));
+  padding-top: 2em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-list {
+  color: gray;
+  border: none;
 }
