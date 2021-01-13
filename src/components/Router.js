@@ -9,11 +9,11 @@ import GoalPage from '../containers/GoalPage'
 const Router = () => {
     return(
         <Switch>
-        {/* in most specific to less specific */}
-        <Route path="/products" component = { ProductPage }/>
-        <Route path="/goals" component = { GoalPage }/>
-        <Route path="/profile" component = { ProfilePage }/>
-        <Route exact path="/" component = { HomePage }/>
+          {/* in most specific to less specific */}
+          <Route path="/products" component = { ProductPage }/>
+          <Route path="/goals" component = { GoalPage }/>
+          <Route path="/profile" component = { ProfilePage }/>
+          <Route exact path="/" component = { HomePage }/>
       </Switch>
     );
 };

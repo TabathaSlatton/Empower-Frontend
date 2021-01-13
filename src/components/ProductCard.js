@@ -7,6 +7,8 @@ const ProductCard = (props) => {
     console.log(props)
     const {id, point_cost, img_url, name} = props
     console.log(point_cost)
+
+
     return(
         <>
         <Card>
