@@ -33,7 +33,7 @@ class GoalsForm extends Component {
         console.log(this.state)
         return (
             <>
-            <div >
+            <div id="goals-form">
                 <div >
                 <h1 id="form-title">New Goal: </h1>
             <Form onSubmit={this.handleSubmit}>

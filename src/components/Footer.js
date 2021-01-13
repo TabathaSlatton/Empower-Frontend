@@ -27,9 +27,9 @@ const Footer = () => {
                     <Col>
                     <h3>More From Me</h3>
                         <ListGroup className="footer-list">
-                        <ListGroup.Item action className="bg-transparent border-0" href="https://www.forbes.com/power-women/#13249bad5e25" target="_blank" style={{color: "darkgray"}}>GitHub</ListGroup.Item>
-                            <ListGroup.Item action className="bg-transparent border-0" href="https://clintonwhitehouse4.archives.gov/women/gresources.html" target="_blank" style={{color: "darkgray"}}>Blog</ListGroup.Item>
-                            <ListGroup.Item action className="bg-transparent border-0" href="https://www.forbes.com/power-women/#13249bad5e25" target="_blank" style={{color: "darkgray"}}>LinkedIn</ListGroup.Item>
+                        <ListGroup.Item action className="bg-transparent border-0" href="https://github.com/TabathaSlatton" target="_blank" style={{color: "darkgray"}}>GitHub</ListGroup.Item>
+                            <ListGroup.Item action className="bg-transparent border-0" href="https://tabathaslatton.github.io/" target="_blank" style={{color: "darkgray"}}>Blog</ListGroup.Item>
+                            <ListGroup.Item action className="bg-transparent border-0" href="https://www.linkedin.com/in/tabatha-slatton" target="_blank" style={{color: "darkgray"}}>LinkedIn</ListGroup.Item>
                         </ListGroup>
                     </Col>
                 </Row>
