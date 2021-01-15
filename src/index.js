@@ -9,7 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-// allows us to make async actions in redux 
+// allows us to make async actions in redux (allows us to use them outside of that class)
 import thunk from 'redux-thunk'
 import { rootReducer } from './reducers/rootReducer';
 import { BrowserRouter as Router} from 'react-router-dom'

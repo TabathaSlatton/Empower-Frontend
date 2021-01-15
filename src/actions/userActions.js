@@ -39,6 +39,7 @@ export const autoLogin = () => {
       .then(response => response.json())
       .then(response => {
         localStorage.token = response.token
+        // localStorage.setItem......removeItem
         dispatch({
         type: "SET_USER",
         payload: {user: response.user}

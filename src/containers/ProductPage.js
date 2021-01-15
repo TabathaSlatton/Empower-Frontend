@@ -23,4 +23,4 @@ const mapStateToProps = (state) => (
     {user: state.users}
 )      
 
-export default connect(mapStateToProps, {  } )(ProductPage);
+export default connect(mapStateToProps)(ProductPage);

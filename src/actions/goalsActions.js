@@ -1,5 +1,7 @@
 const API = "http://localhost:3000"
 
+// export const toggleSort = () => ({type: "TOGGLE_SORT"})
+
 export const fetchGoals = () => {
     return dispatch => {
         fetch(API + "/goals")

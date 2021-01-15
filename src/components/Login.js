@@ -107,4 +107,11 @@ const mapStateToProps = (state) => ({
   form: state.users.loginForm
 })
 
+
+// const mapDispatchToProps = dispatch => {
+//   return dispatch => {
+//     toggleSignup: dispatch({type:"YADA YADA", payload:"SOMETHING"})
+//   }
+// }
+
 export default connect(mapStateToProps, { toggleSignup, handleLoginFormChange, sendSignup, sendLogin })(Login)
