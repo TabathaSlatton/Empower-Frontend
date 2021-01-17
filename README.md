@@ -47,6 +47,14 @@ Npm start to start the server. Allow it to open on localhost 3001.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Future Plans
+
+Add financial planning
+OAuth
+Web Host
+Search local resources
+Build out storefront aspect with points
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
