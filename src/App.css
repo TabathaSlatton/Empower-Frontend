@@ -45,9 +45,7 @@
   background-image: linear-gradient(to left, #fe7896, #f74f73);
   font-weight: bold;
   border: none;
-  /* padding: 1%; */
   align-self: center;
-  /* height: 50%; */
   margin-left: 30px;
   margin-right: 5px;
 }
@@ -197,23 +195,16 @@
 /* ------ Profile Page -------- */
 
 #profile-form {
-  /* width: 60%;
-  padding-top: 3rem;
-  
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rosybrown;
-  border-radius: 50%; */
   margin-left: 30%;
   padding-top: 100px;
   padding-bottom: 3rem;
   width: 600px;
-  background: rgba(219, 219, 219, 0.788);
+  background: rgba(236, 234, 234, 0.541);
   height: 600px;
   border-radius: 300px;
-  border: 6px solid #fe7896;
+  border: 3px solid black;
   font-family: "Advent Pro", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #profile-inputs {
@@ -230,7 +221,7 @@
   font-size: 25px;
 }
 
-#profile-heading {
+#profile-form-background {
   position: relative;
   min-height: 800px;
   background: url("./images/peonies.jpg");
@@ -239,4 +230,23 @@
   background-size: cover;
   text-align: center;
   color: #fff;
+}
+
+#profile-heading {
+  /* position: relative; */
+  margin-top: 0px;
+  min-height: 200px;
+  background: rosybrown;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+#profile-heading-title {
+  font-family: "Aguafina Script", cursive;
+  text-align: center;
+  font-size: 90px;
+  margin-top: 2%;
+  text-shadow: 1px 1px 8px black;
 }
