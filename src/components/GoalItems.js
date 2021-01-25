@@ -5,7 +5,6 @@ import { deleteGoal } from '../actions/goalsActions';
 
 
 
-
 const GoalItems = (props) => {
     const {id, name, completed, category, point_value} = props
 

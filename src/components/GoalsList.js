@@ -26,18 +26,15 @@ class GoalsList extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {/* {props.products.map(product => <ProductCard key = {product.id}  {...product}/>)} */}
                 { this.state.sorted ?
                 <>
-                {/* list.sort((a, b) => (a.color > b.color) ? 1 : -1) */}
                 {
-                    [...this.props.goals].sort((a, b) => a.point_value > b.point_value ? 1 : -1).map(goal => <GoalItems key = {goal.id} {...goal}/> )
+                    [...this.props.goals].filter(goal => goal.user.id === this.props.user_id).sort((a, b) => a.point_value > b.point_value ? 1 : -1).map(goal => <GoalItems key = {goal.id} {...goal}/> )
                 }
-                {}
                 </>
                 :
                 <>
-                {this.props.goals.map(goal => <GoalItems key = {goal.id} {...goal}/> )}
+                {this.props.goals.filter(goal => goal.user.id === this.props.user_id).map(goal => <GoalItems key = {goal.id} {...goal}/> )}
                 </>
 
                 }
@@ -51,10 +48,9 @@ class GoalsList extends Component {
 };
 
 
-const mapStateToProps = state => {
-    return { goals: state.goals }
-}
-
-
+const mapStateToProps = state => ({
+    goals: state.goals,
+    user_id: state.users.id
+})
 
 export default connect(mapStateToProps, { deleteGoal })(GoalsList);
