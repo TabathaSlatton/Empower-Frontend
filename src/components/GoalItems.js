@@ -11,9 +11,11 @@ const GoalItems = (props) => {
     const handleClick = (e) => {
         // e.target.parentNode
 
-        e.target.parentNode.className === "complete" ? 
-            e.target.parentNode.className = "" : 
+        if (e.target.parentNode.className === "complete"){
+            e.target.parentNode.className = ""
+        } else {
             e.target.parentNode.className = "complete" 
+        }
     }
 
     const handleDelete = () => {
