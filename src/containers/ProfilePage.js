@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux'
 import ProfileForm from '../components/ProfileForm';
 import {Image, Col, Row, Container } from 'react-bootstrap'

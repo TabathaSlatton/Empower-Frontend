@@ -1,12 +1,9 @@
-import React, { Component} from 'react'
-import { connect } from 'react-redux'
-
+import React from 'react'
 import GoalsForm from '../components/GoalsForm'
 import GoalsList from '../components/GoalsList'
-class GoalPage extends Component {
 
-    
-    render() {
+const GoalPage = () => {
+
         return(
             <div>
             <section id="home-heading" className="p-5">
@@ -18,11 +15,7 @@ class GoalPage extends Component {
             <GoalsList/>
             </div>
         )
-    }
+
 }
 
-const mapStateToProps = (state) => (
-    {user: state.users}
-)
-
-export default connect(mapStateToProps, { } )(GoalPage);
+export default GoalPage;

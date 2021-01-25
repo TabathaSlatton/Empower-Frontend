@@ -1,21 +1,19 @@
-import React, { Component} from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React from 'react'
 import { connect } from 'react-redux'
 import ProductCards from '../components/ProductCards'
-class ProductPage extends Component {
-  
-    render() {
-        return(
-            <div >
-                <section id="home-heading" className="p-5">
-                    <div className="dark-overlay">
-                        <h1 id="heading-title">Products</h1>       
-                    </div>
-                </section>
-                <ProductCards/>
-            </div>
-        )
-    }
+    
+const ProductPage = (props) => {
+
+    return(
+        <div >
+            <section id="home-heading" className="p-5">
+                <div className="dark-overlay">
+                    <h1 id="heading-title">Products</h1>       
+                </div>
+            </section>
+            <ProductCards/>
+        </div>
+    )
 
 }
 

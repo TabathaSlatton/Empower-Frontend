@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux'
 import AboutUs from '../components/Home/AboutUs';
 import HomeCarousel from '../components/Home/HomeCarousel';
 import Resources from '../components/Home/Resources';
 
+const HomePage = (props) => {
 
-
-class HomePage extends Component {
-  
-  render() {
     return (
       <div>
           <HomeCarousel/><br/><br/>
@@ -16,7 +13,6 @@ class HomePage extends Component {
           <Resources/>
       </div>
     );
-  }
 }
 
 const mapStateToProps = (state) => (

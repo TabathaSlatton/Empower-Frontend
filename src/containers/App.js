@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 
 
 class App extends Component {
+
   
   componentDidMount(){ 
       localStorage.token && this.props.autoLogin()  
