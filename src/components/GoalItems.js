@@ -22,13 +22,13 @@ const GoalItems = (props) => {
                 const newPoints = props.user.point_wallet - point_value
                 props.sendUpdateProfile([{ point_wallet: newPoints}, props.user.id])
                 props.updateCompleteGoal([{completed: false}, id])
-                e.target.parentElement.remove()
+                // e.target.parentElement.remove()
             } 
         } else {
             const newPoints = (props.user.point_wallet || 0) + point_value
             props.sendUpdateProfile([{ point_wallet: newPoints}, props.user.id])
             props.updateCompleteGoal([{completed: true}, id])
-            e.target.parentElement.remove()
+            // e.target.parentElement.remove()
         }
     }
 
