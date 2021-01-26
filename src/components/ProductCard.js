@@ -13,7 +13,7 @@ const ProductCard = (props) => {
         <>
         <Card>
             {/* heart icon to add to wish list---needs functionality */}
-            <header> <Button id="save-button"><i class="far fa-heart"></i></Button> </header>
+            <header> <Button id="save-button">&hearts;</Button> </header>
             <Card.Title id="card-title">{name}</Card.Title>
             <Card.Img src={img_url} alt={name} /><br/>
             <Card.Body>{point_cost} points</Card.Body>

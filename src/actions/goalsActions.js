@@ -46,25 +46,26 @@ export const deleteGoal = goalId => {
      }
 }
 
-// export const updateCompleteGoal = (goalData) => {
-//     return dispatch => {
-//         const body = {goalData[0]}
-//         const id = goalData[1]
-//         console.log("id", goalData)
-//       fetch(API + '/goals/' + id, {
-//         method: 'PATCH', 
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(body),
-//       })
-//       .then(response => response.json())
-//       .then(response => {
-//     //     dispatch({
-//     //     type: "UPDATE_GOAL",
-//     //     payload: {user: response.user}
-//     //   })
-//         console.log(response)
-//     })
-//     }
-//   }
+export const updateCompleteGoal = (goalData) => {
+    return dispatch => {
+        const body = goalData[0]
+        const id = goalData[1]
+        console.log("id", goalData)
+      fetch(API + '/goals/' + id, {
+        method: 'PATCH', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      })
+      .then(response => response.json())
+      .then(goal => {
+        dispatch({
+        type: "UPDATE_GOAL",
+        payload: goal
+      })
+      console.log("goal", goal)
+    })
+    }
+  }
+
